@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header_container">
+                <img src="images/logo.png" alt="logo" class="logo">
+                <p class="header_info">This is your chance to become the best pilot in the game and get rich!</p>
+                <button class="btn signup">SIGN UP</button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container main_container">
+                <div class="aviator"><img src="images/aviator.png" alt="aviator"></div>
+                <h1 class="title">Welcome pack <br>450% and ₹2,50,000 <br>On First 3 deposits</h1>
+                <div class="btn_border"><button class="btn claim">CLAIM THE BONUS!</button></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container footer_container">
+                <div class="copy">
+                    <p>&copy; TIVITBET</p>
+                    <img src="images/tg.png" alt="tg">
+                </div>
+                <div class="payment">
+                    <img src="images/1.png" alt="HDFC">
+                    <img src="images/2.png" alt="sbi">
+                    <img src="images/3.png" alt="icici">
+                    <img src="images/4.png" alt="visa">
+                    <img src="images/5.png" alt="mastercard">
+                    <img src="images/6.png" alt="lipi">
+                </div>
+            </div>
+        </footer>
+        <div class="plain_container">
+            <div class="plain">
+                <div class="bubble">
+                    <div class="bubble_text_container">
+                        <div class="bubble_text">
+                            <p>JOIN US AND GET <br>A BONUS UP TO</p>
+                            <p>₹2,50,000 <br> <span>INR</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clouds"></div>
+    </div>
+
+    <script>
+        let wrapper = document.querySelector(".wrapper");
+    
+        function adaptationElements() {
+            const aspectRatio = window.innerWidth / window.innerHeight;
+            let aspectClass;
+    
+            if (aspectRatio >= 2) {
+                aspectClass = 'modificate1';
+            } else if (aspectRatio >= 1.5) {
+                aspectClass = 'modificate2';
+            } else if (aspectRatio > 1) {
+                aspectClass = 'modificate3';
+            } else {
+                aspectClass = 'modificate4';
+            }
+    
+            wrapper.className = `wrapper ${aspectClass}`;
+        }
+    
+        adaptationElements();
+        window.addEventListener('resize', adaptationElements);
+    </script>
+</body>
+</html>
